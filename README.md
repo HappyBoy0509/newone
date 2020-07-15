@@ -17,34 +17,7 @@ pip install -r requirements.txt
 python3 -m tobrot
 ```
 
-### an example config.py 👇
-```py
-from tobrot.sample_config import Config
 
-class Config(Config):
-  TG_BOT_TOKEN = "123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11"
-  # These example values won't work. You must get your own app_id and
-  # api_hash from https://my.telegram.org, under API Development.
-  APP_ID = 6
-  API_HASH = "eb06d4abfb49dc3eeb1aeb98ae0f581e"
-  # please read https://t.me/c/1279877202/74
-  # if you have not read the above README
-  AUTH_CHANNEL = [-1001234567890]
-```
-
-### Variable Explanations
-
-##### Mandatory Variables
-
-* `TG_BOT_TOKEN`: Create a bot using [@BotFather](https://telegram.dog/BotFather), and get the Telegram API token.
-
-* `APP_ID`
-* `API_HASH`: Get these two values from [my.telegram.org/apps](https://my.telegram.org/apps).
-  * N.B.: if Telegram is blocked by your ISP, try our [Telegram bot](https://telegram.dog/UseTGXBot) to get the IDs.
-
-* `AUTH_CHANNEL`:
-Create a Super Group in Telegram, add `@GoogleIMGBot` to the group, and send /id in the chat, to get this value.
-You can add multiple IDs seperated by space.
 
 ##### Optional Configuration Variables
 
@@ -92,19 +65,4 @@ You can add multiple IDs seperated by space.
 * if file is a TAR archive, [read this](https://t.me/c/1434259219/104) to know how to uncompress.
 
 
-## Issues or Feature Requests
 
-* search for known issues, [here](https://t.me/c/1434259219/118) or in the [GitHub Issues](https://github.com/SpEcHiDe/PublicLeech/issues).
-
-* add issues / feature requests, [here](https://github.com/SpEcHiDe/PublicLeech/issues/new).
-
-
-## Credits, and Thanks to
-
-* [Dan Tès](https://telegram.dog/haskell) for his [Pyrogram Library](https://github.com/pyrogram/pyrogram)
-* [Robots](https://telegram.dog/Robots) for their [@UploadBot](https://telegram.dog/UploadBot)
-* [@AjeeshNair](https://telegram.dog/AjeeshNait) for his [torrent.ajee.sh](https://torrent.ajee.sh)
-* [@gotstc](https://telegram.dog/gotstc), @aryanvikash, [@HasibulKabir](https://telegram.dog/HasibulKabir) for their TORRENT groups
-* [rClone Team](https://github.com/rclone/rclone)
-* [gautamajay52](https://github.com/gautamajay52/TorrentLeech-Gdrive)
-* [![CopyLeft](https://telegra.ph/file/b514ed14d994557a724cb.jpg)](https://telegra.ph/file/fab1017e21c42a5c1e613.mp4 "CopyLeft Credit Video")
