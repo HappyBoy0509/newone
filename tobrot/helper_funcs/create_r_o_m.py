@@ -29,21 +29,21 @@ async def get_markup(message: Message):
     inline_keyboard = []
     ikeyboard = []
     ikeyboard.append(InlineKeyboardButton(
-        "leech 🤔🤔",
+        "Leech",
         callback_data=("leech").encode("UTF-8")
     ))
     ikeyboard.append(InlineKeyboardButton(
-        "youtube-dl",
+        "Ytdl",
         callback_data=("ytdl").encode("UTF-8")
     ))
     inline_keyboard.append(ikeyboard)
     ikeyboard = []
     ikeyboard.append(InlineKeyboardButton(
-        "A leech TAR . GZ  🤔🤔",
+        "Leech As TAR . GZ ",
         callback_data=("leecha").encode("UTF-8")
     ))
     ikeyboard.append(InlineKeyboardButton(
-        "A youtube-dl TAR . GZ",
+        "Ytdl As TAR . GZ",
         callback_data=("ytdla").encode("UTF-8")
     ))
     inline_keyboard.append(ikeyboard)
@@ -74,6 +74,6 @@ async def get_markup(message: Message):
     inline_keyboard = []
 
     reply_text = (
-        "please select the required option"
+        "Select The Required Option 🤯"
     )
     return reply_text, reply_markup
