@@ -45,9 +45,7 @@ async def upload_to_tg(
     LOGGER.info(local_file_name)
     base_file_name = os.path.basename(local_file_name)
     caption_str = ""
-    caption_str += "<code>"
     caption_str += base_file_name
-    caption_str += "</code>"
     # caption_str += "\n\n"
     # caption_str += "<a href='tg://user?id="
     # caption_str += str(from_user)
@@ -135,7 +133,7 @@ async def upload_single_file(message, local_file_name, caption_str, from_user, e
             message_for_progress_display = await message.reply_text(
                 "starting upload of {}".format(os.path.basename(local_file_name))
             )
-        if local_file_name.upper().endswith(("MKV", "MP4", "WEBM")):
+        if local_file_name.upper().endswith(("WEBM")):
             metadata = extractMetadata(createParser(local_file_name))
             duration = 0
             if metadata.has("duration"):
@@ -204,7 +202,7 @@ async def upload_single_file(message, local_file_name, caption_str, from_user, e
                     thumb=thumb,
                     supports_streaming=True,
                     disable_notification=True,
-                    # reply_to_message_id=message.reply_to_message.message_id,
+                    reply_to_message_id=message.reply_to_message.message_id,
                     progress=progress_for_pyrogram,
                     progress_args=(
                         "trying to upload",
@@ -259,7 +257,7 @@ async def upload_single_file(message, local_file_name, caption_str, from_user, e
                     title=title,
                     thumb=thumb,
                     disable_notification=True,
-                    # reply_to_message_id=message.reply_to_message.message_id,
+                    reply_to_message_id=message.reply_to_message.message_id,
                     progress=progress_for_pyrogram,
                     progress_args=(
                         "trying to upload",
@@ -301,7 +299,7 @@ async def upload_single_file(message, local_file_name, caption_str, from_user, e
                     caption=caption_str,
                     parse_mode="html",
                     disable_notification=True,
-                    # reply_to_message_id=message.reply_to_message.message_id,
+                    reply_to_message_id=message.reply_to_message.message_id,
                     progress=progress_for_pyrogram,
                     progress_args=(
                         "trying to upload",
